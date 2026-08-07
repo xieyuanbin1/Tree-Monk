@@ -9,10 +9,12 @@ import es from './locales/es.json'
 import ru from './locales/ru.json'
 import pl from './locales/pl.json'
 import pt from './locales/pt.json'
+import zh from './locales/zh.json'
 import type { AppLanguage } from '@shared/types'
 import { APP_LANGUAGES, isAppLanguage } from '@shared/languages'
 
 const LANGUAGE_META: Record<AppLanguage, { label: string; flag: string }> = {
+  zh: { label: '中文', flag: '🇨🇳' },
   hu: { label: 'Magyar', flag: '🇭🇺' },
   en: { label: 'English', flag: '🇬🇧' },
   de: { label: 'Deutsch', flag: '🇩🇪' },
@@ -47,10 +49,11 @@ i18n.use(initReactI18next).init({
     es: { translation: es },
     ru: { translation: ru },
     pl: { translation: pl },
-    pt: { translation: pt }
+    pt: { translation: pt },
+    zh: { translation: zh }
   },
   lng: initialLang(),
-  fallbackLng: 'en',
+  fallbackLng: 'zh',
   interpolation: { escapeValue: false }
 })
 

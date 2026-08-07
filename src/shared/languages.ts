@@ -1,6 +1,6 @@
 import type { AppLanguage } from './types'
 
-export const APP_LANGUAGES: readonly AppLanguage[] = ['hu', 'en', 'de', 'fr', 'it', 'es', 'ru', 'pl', 'pt']
+export const APP_LANGUAGES: readonly AppLanguage[] = ['hu', 'en', 'de', 'fr', 'it', 'es', 'ru', 'pl', 'pt', 'zh']
 const APP_LANGUAGE_SET = new Set<string>(APP_LANGUAGES)
 
 export function isAppLanguage(value: string): value is AppLanguage {
@@ -9,5 +9,5 @@ export function isAppLanguage(value: string): value is AppLanguage {
 
 export function resolveAppLanguage(value: string): AppLanguage {
   const code = value.slice(0, 2).toLowerCase()
-  return isAppLanguage(code) ? code : 'en'
+  return isAppLanguage(code) ? code : 'zh'
 }

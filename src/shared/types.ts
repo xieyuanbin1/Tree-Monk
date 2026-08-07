@@ -930,7 +930,7 @@ export interface PluginPanelInfo {
   apiBase: string
 }
 
-export type AppLanguage = 'hu' | 'en' | 'de' | 'fr' | 'it' | 'es' | 'ru' | 'pl' | 'pt'
+export type AppLanguage = 'hu' | 'en' | 'de' | 'fr' | 'it' | 'es' | 'ru' | 'pl' | 'pt' | 'zh'
 
 /** Everything the user hid from the data-issue scans, restorable one by one. */
 export interface HiddenIssues {
