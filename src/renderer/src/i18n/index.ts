@@ -3,9 +3,11 @@ import { initReactI18next } from 'react-i18next'
 import hu from './locales/hu.json'
 import en from './locales/en.json'
 import de from './locales/de.json'
+import zh from './locales/zh.json'
 import type { AppLanguage } from '@shared/types'
 
 export const LANGUAGES: { code: AppLanguage; label: string; flag: string }[] = [
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
   { code: 'hu', label: 'Magyar', flag: '🇭🇺' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' }
@@ -26,7 +28,8 @@ i18n.use(initReactI18next).init({
   resources: {
     hu: { translation: hu },
     en: { translation: en },
-    de: { translation: de }
+    de: { translation: de },
+    zh: { translation: zh }
   },
   lng: initialLang(),
   fallbackLng: 'en',
